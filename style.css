@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+html {
+  font-family: Poppins, sans-serif;
+  color: #f0f0f0;
+}
+
+body {
+  min-height: 100vh;
+  /* nice background color */
+  background: #0b0d15;
+}
+
+.row{
+  display: flex;
+  width: 100vw;
+  float: left;
+}
+
+
+
+/* Animated border with conic gradient */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.tooltip-container {
+  position: relative;
+  width: 291px;
+  padding: 4px;
+  border-radius: 12px;
+  animation: spin 5s linear infinite;
+  background: conic-gradient(
+    from var(--angle),
+    #06251b,
+    #0c352e,
+    #11d68a,
+    #07613b,
+    #06251b
+  );
+}
+
+.tooltip-container::before {
+  content: '';
+  position: absolute;
+  /* inset making glow */
+  /* inset: 0;  */
+  z-index: -1;
+  background: conic-gradient(
+    from var(--angle),
+    #06251b,
+    #0c352e,
+    #11d68a,
+    #07613b,
+    #06251b
+  );
+
+  filter: blur(20px);
+  border-radius: 12px;
+  animation: spin 3s linear infinite;
+}
+
+.tooltip {
+  position: relative;
+  background: #063b33;
+  color: #fff;
+  padding: 1em;
+  font-size: 16px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 260px;
+  z-index: 1;
+}
+
+/* Tooltip arrow (tail) */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20%;  
+  transform: translateX(-50%);
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: #063b33 transparent transparent transparent;
+}
+
+
+.profile-container{
+    clear: both;
+    width: 380px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.text-devider{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: -10px;
+}
+
+
+
+.image{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 25px;
+  margin-top: 10px;
+  border: 1px solid rgb(16, 80, 58);
+}
+
+.square{
+  height: 200px;
+  width: 400px;
+  background-color: #0b0d15;
+  border: 1px solid white;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.square-content{
+  text-align: center;
+}
+
+span{
+  transform: translate(20px,15px);
+  text-align: center;
+}
+
+.name{
+  margin-left: -80px;
+}
+
+.image2{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -50px;
+  margin-left: 20px;
+}
