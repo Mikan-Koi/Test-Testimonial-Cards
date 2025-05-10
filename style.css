@@ -145,8 +145,17 @@ span{
 
 .name{
   margin-left: -80px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
+.posititon{
+  color: #7e7a7a;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
 .image2{
   height: 70px;
   width: 70px;
@@ -169,7 +178,36 @@ span{
   background-color: #121212;
   margin-left: 20px;
   border-radius: 50px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.star{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.checked{
+  color: yellow;
+  scale: 1.5;
+}
+
+.text-third-opinion{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.content-third-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
